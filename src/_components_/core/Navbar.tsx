@@ -9,11 +9,9 @@ export default function NavBar() {
             height: "70px",
             backgroundColor: "custom.red",
             alignItems: "center",
-            paddingLeft: "64px"
-
         }}>
-            <Box sx={{ fontFamily: "Pacifico" }}>
-                <Typography sx={{ color: "custom.white", fontSize: "18px" }}>B.G</Typography>
+            <Box sx={{ fontFamily: "Pacifico", paddingLeft: "64px" }}>
+                <Typography sx={{ color: "custom.white", fontSize: "18px" }}>B.G.</Typography>
             </Box>
 
             <Box sx={{
@@ -21,7 +19,7 @@ export default function NavBar() {
                 justifyContent: "center",
                 flexGrow: 1
             }}>
-                <List sx={{ display: "flex" }}>
+                <List sx={{ display: "flex", paddingRight: "64px" }}>
                     <NavListItem title="Home" />
                     <NavListItem title="Gallery" />
                     <NavListItem title="Menu" />
