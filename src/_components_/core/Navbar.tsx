@@ -5,13 +5,18 @@ export default function NavBar() {
     return (
         <Box sx={{
             display: "flex",
-            width: "100%",
+            width: {
+                xs: "100%"
+            },
             height: "70px",
             backgroundColor: "custom.red",
             alignItems: "center",
+            flexDirection: {
+                xs: "column"
+            }
         }}>
-            <Box sx={{ fontFamily: "Pacifico", paddingLeft: "64px" }}>
-                <Typography sx={{ color: "custom.white", fontSize: "18px" }}>B.G.</Typography>
+            <Box>
+                <Typography sx={{ color: "custom.white", fontSize: "18px", fontFamily: "Pacifico" }}>B.G.</Typography>
             </Box>
 
             <Box sx={{
@@ -19,7 +24,7 @@ export default function NavBar() {
                 justifyContent: "center",
                 flexGrow: 1
             }}>
-                <List sx={{ display: "flex", paddingRight: "64px" }}>
+                <List sx={{ display: "flex" }}>
                     <NavListItem title="Home" />
                     <NavListItem title="Gallery" />
                     <NavListItem title="Menu" />

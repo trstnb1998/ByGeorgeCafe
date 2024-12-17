@@ -40,7 +40,7 @@ const theme = createTheme({
     },
 
     typography: {
-        fontFamily: "Pacifico, Inter, Quicksand, Averia Serif Libre",
+        fontFamily: "Inter, Pacifico, Quicksand, Averia Serif Libre",
         "fontWeightLight": 400,
         "fontWeightRegular": 500,
         "fontWeightMedium": 600,

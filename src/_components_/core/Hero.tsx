@@ -22,8 +22,8 @@ export default function HeroSection() {
                     color: "custom.red",
                     borderRadius: "4px",
                     padding: "4px",
-                }}
-            >
+                    fontFamily: "Pacifico"
+                }}>
                 By George
             </Typography>
             <Box sx={{ paddingTop: 8 }}>
