@@ -17,12 +17,27 @@ export default function HeroSection() {
                 variant="h1"
                 sx={{
                     textAlign: "center",
-                    fontSize: "130px",
-                    fontWeight: 400,
+                    fontSize: {
+                        xs: "50px",
+                        sm: "130px",
+                    },
+                    fontWeight: {
+                        xs: 800,
+                        sm: 400
+                    },
                     color: "custom.red",
                     borderRadius: "4px",
                     padding: "4px",
-                    fontFamily: "Pacifico"
+                    fontFamily: {
+                        sm: "Pacifico"
+                    },
+                    textTransform: {
+                        xs: "uppercase",
+                        sm: "none"
+                    },
+                    marginTop: {
+                        xs: "1rem"
+                    }
                 }}>
                 By George
             </Typography>

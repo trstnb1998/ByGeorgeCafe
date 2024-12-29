@@ -30,7 +30,14 @@ export default function NavBar() {
                     <NavListItem title="Menu" />
                     <NavListItem title="Retail" />
                     <NavListItem title="Inquiries" />
-                    <NavListItem title="Contact" />
+                    <Box sx={{
+                        display: {
+                            xs: "none",
+                            sm: "flex",
+                        }
+                    }}>
+                        <NavListItem title="Contact" />
+                    </Box>
                 </List>
             </Box >
         </Box >

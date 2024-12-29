@@ -18,10 +18,10 @@ export default function NavListItem({ title }: ListItemComponentProperties) {
                         fontWeight: "500",
                         color: "custom.white",
                         paddingLeft: {
-                            xs: "10x",
+                            xs: 0,
                         },
                         paddingRight: {
-                            xs: "10px",
+                            xs: 0,
                         },
                         cursor: "pointer"
                     }}>
