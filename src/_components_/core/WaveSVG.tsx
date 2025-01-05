@@ -7,7 +7,7 @@ const WaveShape = ({ color = "#ffffff" }) => (
         height="100"
         viewBox="0 0 1440 98"
         preserveAspectRatio="none"
-        style={{ display: "block" }}
+        style={{ display: "block", overflow: "visible", minWidth: "1440px" }}
     >
         <defs>
             <filter

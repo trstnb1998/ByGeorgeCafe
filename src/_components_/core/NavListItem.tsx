@@ -14,14 +14,17 @@ export default function NavListItem({ title }: ListItemComponentProperties) {
                         fontFamily: "Inter, sans-serif",
                         fontSize: {
                             xs: "12px",
+                            sm: "18px"
                         },
                         fontWeight: "500",
                         color: "custom.white",
-                        paddingLeft: {
+                        marginLeft: {
                             xs: 0,
+                            sm: "13px"
                         },
-                        paddingRight: {
+                        marginRight: {
                             xs: 0,
+                            sm: "13px"
                         },
                         cursor: "pointer"
                     }}>
