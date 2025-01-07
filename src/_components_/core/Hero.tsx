@@ -6,7 +6,7 @@ export default function HeroSection() {
     return (
         <Box
             sx={{
-                height: "864px",
+                height: { xs: "900px", sm: "864px" },
                 width: "100%",
                 backgroundColor: "custom.beige",
                 position: "relative",
@@ -19,7 +19,8 @@ export default function HeroSection() {
                     textAlign: "center",
                     fontSize: {
                         xs: "50px",
-                        sm: "130px",
+                        sm: "120px",
+                        md: "130px",
                     },
                     fontWeight: {
                         xs: 800,
@@ -41,9 +42,7 @@ export default function HeroSection() {
                 }}>
                 By George
             </Typography>
-            <Box sx={{ paddingTop: 8 }}>
-                <HeroImages />
-            </Box>
+            <HeroImages />
             <Box sx={{ position: "absolute", bottom: 0, left: 0, right: 0 }}>
                 <WaveShape color="white" />
             </Box>
