@@ -4,6 +4,7 @@ declare module '@mui/material/styles' {
     interface Theme {
         custom: {
             "red": string;
+            "gray": string;
             "beige": string;
             "white": string;
             "black": string;
@@ -13,6 +14,7 @@ declare module '@mui/material/styles' {
     interface CustomThemeDesignColors {
         custom: {
             "red": string;
+            "gray": string;
             "beige": string;
             "white": string;
             "black": string;
@@ -22,6 +24,7 @@ declare module '@mui/material/styles' {
     interface PaletteOptions {
         custom: {
             "red": string;
+            "gray": string;
             "beige": string;
             "white": string;
             "black": string;
@@ -33,6 +36,7 @@ const theme = createTheme({
     "palette": {
         "custom": {
             "red": "#FF2D2D",
+            "gray": "#767272",
             "beige": "#FFF8E1",
             "white": "#FFFFFF",
             "black": "#181818"
