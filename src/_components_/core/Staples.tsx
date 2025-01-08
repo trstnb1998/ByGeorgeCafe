@@ -35,10 +35,10 @@ export default function Staples() {
                     textAlign: "center",
                     paddingBottom: "7rem"
                 }}>
-                    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", width: { xs: "364px", lg: "424px" }, borderLeft: "1px solid red", borderRight: { xs: "1px solid red", lg: 0 }, height: "550px", gap: 4, marginTop: { xs: "7rem", lg: 0 }, order: { xs: 3, lg: 1 } }}>
+                    <Box sx={{ display: "flex", flexDirection: "column", position: "relative", alignItems: "center", width: { xs: "364px", lg: "424px" }, borderLeft: "1px solid red", borderRight: { xs: "1px solid red", lg: 0 }, height: "550px", gap: 4, marginTop: { xs: "7rem", lg: 0 }, order: { xs: 3, lg: 1 } }}>
                         <Typography sx={{ fontFamily: "Averia Serif Libre", fontWeight: 300, fontSize: "48px", order: { xs: 1, lg: 1 } }}>Bagels</Typography>
                         <Typography sx={{ order: { xs: 3, lg: 2 }, color: "custom.gray", textAlign: { xs: "center", lg: "left" }, paddingRight: "16px", paddingLeft: "16px" }}><a href="https://www.brooklynboy.com.au/" target="_blank" style={{ color: "inherit" }}>Brooklyn Boy Bagels</a> with several variations, including cream-cheese, salmon and various other signature bagels. Our bagels are a must-try for any bagel enthusiast.</Typography>
-                        <Box sx={{ order: { xs: 2, lg: 3 } }}>
+                        <Box sx={{ order: { xs: 2, lg: 3 }, position: "absolute", bottom: 0, left: 0 }}>
                             <Image src={bagel} alt="bagel" />
                         </Box>
                     </Box>
@@ -49,10 +49,10 @@ export default function Staples() {
                             <Image src={cookies} alt="cookies" />
                         </Box>
                     </Box>
-                    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", width: { xs: "364px", lg: "424px" }, borderLeft: "1px solid red", borderRight: "1px solid red", height: "550px", gap: 4, marginTop: { xs: "7rem", lg: 0 }, order: { xs: 2, lg: 3 } }}>
+                    <Box sx={{ display: "flex", flexDirection: "column", position: "relative", alignItems: "center", width: { xs: "364px", lg: "424px" }, borderLeft: "1px solid red", borderRight: "1px solid red", height: "550px", gap: 4, marginTop: { xs: "7rem", lg: 0 }, order: { xs: 2, lg: 3 } }}>
                         <Typography sx={{ fontFamily: "Averia Serif Libre", fontWeight: 300, fontSize: "48px", order: { xs: 1, lg: 1 } }}>Sandwiches</Typography>
                         <Typography sx={{ order: { xs: 3, lg: 2 }, color: "custom.gray", textAlign: { xs: "center", lg: "right" }, paddingRight: { xs: "20px", lg: "16px" }, paddingLeft: { xs: "20px", lg: "24px" } }}>Our signature sandwiches feature classics such as the Reuben and schnitzel, alongside a variety of other distinctive offerings. Our versatile selection, ensures there is something to satisfy every palate</Typography>
-                        <Box sx={{ order: { xs: 2, lg: 3 } }}>
+                        <Box sx={{ order: { xs: 2, lg: 3 }, position: "absolute", bottom: 0, right: "-2px" }}>
                             <Image src={sandwich} alt="sandwich" />
                         </Box>
                     </Box>

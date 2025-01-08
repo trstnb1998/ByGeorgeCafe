@@ -11,7 +11,7 @@ export default function Home() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <Box sx={{
-                display: "flex", width: "100svw", flexDirection: "column", flex: 1
+                display: "flex", width: "100svw", flexDirection: "column"
             }}>
                 <NavBar />
                 <HeroSection />

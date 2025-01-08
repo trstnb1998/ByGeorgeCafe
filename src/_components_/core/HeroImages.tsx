@@ -11,9 +11,6 @@ import tikTokButton from '@/_assets_/images/tikTokButton.png';
 
 
 export default function HeroImages() {
-
-    // const imageStyle = { boxShadow: "4px 4px 8px #000", borderRadius: "15px" };
-
     return (
         <Box sx={{
             display: "flex",
@@ -25,7 +22,7 @@ export default function HeroImages() {
         }}>
             <Box>
                 <Box sx={{ position: "relative" }}>
-                    <Box sx={{ position: "absolute", bottom: -10, marginTop: 3.5, justifyContent: "center" }}>
+                    <Box sx={{ position: "absolute", bottom: -10, left: "50%", transform: "translateX(-50%)", marginTop: 3.5 }}>
                         <Image src={holdCoffee} alt="holdCoffee" style={{ height: 525, width: 522 }} />
                     </Box>
                     <Box sx={{ display: "flex", gap: "53px", marginLeft: "53px" }}>
