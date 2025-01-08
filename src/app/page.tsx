@@ -5,6 +5,7 @@ import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 import NavBar from "@/_components_/core/Navbar";
 import HeroSection from "@/_components_/core/Hero";
 import Staples from "@/_components_/core/Staples";
+import InstaSection from "@/_components_/core/Instagram";
 export default function Home() {
     return (
         <ThemeProvider theme={theme}>
@@ -15,6 +16,7 @@ export default function Home() {
                 <NavBar />
                 <HeroSection />
                 <Staples />
+                <InstaSection />
             </Box>
         </ThemeProvider >
     );
