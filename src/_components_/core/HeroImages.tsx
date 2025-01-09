@@ -5,9 +5,8 @@ import byGeorgeMascot from '@/_assets_/images/byGeorgeMascot.png';
 import holdCoffee from '@/_assets_/images/holdCoffee.png';
 import doorDash from '@/_assets_/images/doorDash.png';
 import uberEats from '@/_assets_/images/uberEats.png';
-import igButton from '@/_assets_/images/igButton.png';
-import fbButton from '@/_assets_/images/fbButton.png';
-import tikTokButton from '@/_assets_/images/tikTokButton.png';
+
+import SocialButtons from './SocialButtons';
 
 
 export default function HeroImages() {
@@ -112,25 +111,23 @@ export default function HeroImages() {
                 </Box>
             </Box>
 
-            <Box gap={2} sx={{
+            <Box sx={{
                 display: "flex",
                 justifyContent: {
                     xs: "center",
                     sm: "flex-end"
                 },
-                paddingRight: {
+                marginRight: {
                     xs: 0,
                     sm: "5rem"
                 },
                 marginTop: {
                     xs: "-3em",
-                    sm: "-4em"
+                    sm: "-5em"
                 },
-                paddingBottom: "2em"
+                marginBottom: "2rem"
             }}>
-                <Image src={tikTokButton} alt="Tik Tok" style={{ height: "40px", width: "40px" }} />
-                <Image src={fbButton} alt="Facebook" style={{ height: "40px", width: "40px" }} />
-                <Image src={igButton} alt="Instagram" style={{ height: "40px", width: "40px" }} />
+                <SocialButtons />
             </Box>
         </Box >
     )
