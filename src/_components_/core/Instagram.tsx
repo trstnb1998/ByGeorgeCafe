@@ -47,6 +47,9 @@ export default function InstaSection() {
                     </Box>
                 </Box>
             </Box >
+            <Box sx={{ marginTop: "-1px" }}>
+                <WaveShape3 />
+            </Box>
         </>
     )
 }
