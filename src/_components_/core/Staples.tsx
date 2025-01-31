@@ -42,7 +42,7 @@ export default function Staples() {
                             <Image src={bagel} alt="bagel" />
                         </Box>
                     </Box>
-                    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", width: { xs: "364px", lg: "424px" }, borderLeft: "1px solid red", borderRight: { xs: "1px solid red", lg: 0 }, height: "550px", gap: 4, order: { xs: 1, lg: 2 } }}>
+                    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", width: { xs: "364px", lg: "470px" }, borderLeft: "1px solid red", borderRight: { xs: "1px solid red", lg: 0 }, height: "550px", gap: 4, order: { xs: 1, lg: 2 } }}>
                         <Typography sx={{ fontFamily: "Averia Serif Libre", fontWeight: 300, fontSize: "48px", order: { xs: 1, lg: 2 } }}>Cookies</Typography>
                         <Typography sx={{ order: { xs: 3 }, color: "custom.gray", paddingRight: "16px", paddingLeft: "16px" }}>Freshly baked <a href="https://www.butterboy.com.au/shop-cookies" target="_blank" style={{ color: "inherit" }}>Butterboy</a> cookies with flavours like double choc chip, gluten free fudge, and much more. Perfect to pair with that morning coffee.</Typography>
                         <Box sx={{ order: { xs: 2, lg: 1 } }}>
