@@ -7,6 +7,7 @@ import HeroSection from "@/_components_/core/Hero";
 import Staples from "@/_components_/core/Staples";
 import InstaSection from "@/_components_/core/Instagram";
 import Menu from "@/_components_/core/MenuSection";
+import ProductSection from "@/_components_/core/ProductSection";
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
                 <Staples />
                 <InstaSection />
                 <Menu />
+                <ProductSection />
             </Box>
         </ThemeProvider >
     );

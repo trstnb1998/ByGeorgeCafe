@@ -12,7 +12,7 @@ import SocialButtons from "./SocialButtons";
 export default function InstaSection() {
     return (
         <>
-            <Box sx={{ overflow: "hidden", marginBottom: "-1px" }}>
+            <Box sx={{ overflow: "hidden", marginBottom: "-2px" }}>
                 <WaveShape2 />
             </Box>
             <Box sx={{ display: "flex", flexDirection: { xs: "column", lg: "row" }, height: { xs: "1375px", lg: "600px" }, width: "100%", backgroundColor: "custom.red", justifyContent: "center", alignItems: "center" }}>
@@ -47,7 +47,7 @@ export default function InstaSection() {
                     </Box>
                 </Box>
             </Box >
-            <Box sx={{ marginTop: "-1px" }}>
+            <Box sx={{ marginTop: "-2px", overflow: "hidden" }}>
                 <WaveShape3 />
             </Box>
         </>

@@ -8,7 +8,7 @@ import Menu from "./Menu";
 export default function MenuSection() {
     return (
         <>
-            <Box sx={{ display: "flex", width: "90%", backgroundColor: "custom.beige", borderLeft: "1px solid #FF2D2D", borderRight: "1px solid #FF2D2D", marginX: "auto", flexDirection: "column", marginTop: "-4rem", zIndex: "-1" }}>
+            <Box sx={{ display: "flex", width: "90%", backgroundColor: "custom.beige", borderLeft: "1px solid #FF2D2D", borderRight: "1px solid #FF2D2D", marginX: "auto", flexDirection: "column", marginY: "-4rem", paddingBottom: "6rem", zIndex: "-1" }}>
                 <Box sx={{ display: "flex", flexDirection: "row", justifyContent: { xs: "center", md: "space-between" }, alignItems: "center", width: "100%", paddingX: { xs: 0, md: "5em" }, marginTop: "8em" }}>
                     <Box sx={{ display: { xs: "none", md: "flex" } }}>
                         <Image src={uberEats} alt="Uber Eats" style={{ height: "84px", width: "84px" }} />
@@ -39,7 +39,7 @@ export default function MenuSection() {
                             fontWeight: 300,
                             color: "custom.red",
                             marginLeft: { md: 0, lg: "4rem" },
-                            textAlign: "center",
+                            textAlign: { xs: "center", lg: "left" },
                             marginBottom: "1em",
                             marginTop: "2em"
                         }}
