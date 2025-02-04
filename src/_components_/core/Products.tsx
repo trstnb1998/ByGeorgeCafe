@@ -102,16 +102,14 @@ export default function Products() {
             <Box sx={{ flexGrow: 1, width: "55em" }}>
                 <Grid container spacing={2} columns={{ xs: 2, sm: 2, md: 4 }}>
                     {products.map((product) => (
-                        <Grid key={product.id} size={{ md: 4 }}>
-                            <Box sx={{ flexDirection: "column" }}>
-                                <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                                    {product.image}
-                                </Box>
-                                <Box sx={{ width: "85%" }}>
-                                    <Typography sx={{ textAlign: "center", color: "custom.white" }}>{product.item}</Typography>
-                                </Box>
+                        <Box key={product.id} sx={{ flexDirection: "column" }}>
+                            <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
+                                {product.image}
                             </Box>
-                        </Grid>
+                            <Box sx={{ width: "85%" }}>
+                                <Typography sx={{ textAlign: "center", color: "custom.white" }}>{product.item}</Typography>
+                            </Box>
+                        </Box>
                     ))}
                 </Grid>
             </Box>
