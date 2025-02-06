@@ -2,10 +2,10 @@ import { Box, Typography } from "@mui/material"
 import Image from "next/image";
 import WaveShape2 from "./WaveSVG2"
 import WaveShape3 from "./WaveSVG3"
-import pourCoffee from '/public/images/pourCoffee.png';
-import pastry1 from '/public/images/pastry1.png';
-import pastry2 from '/public/images/pastry2.png';
-import cookie from '/public/images/cookie.png';
+import pourCoffee from "../../../public/images/pourCoffee.png"
+import pastry1 from '../../../public/images/pastry1.png';
+import pastry2 from '../../../public/images/pastry2.png';
+import cookie from '../../../public/images/cookie.png';
 
 import SocialButtons from "./SocialButtons";
 
