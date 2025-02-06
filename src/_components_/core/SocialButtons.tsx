@@ -1,8 +1,8 @@
 import { Box, Link } from "@mui/material";
 import Image from "next/image";
-import igButton from '/images/igButton.png';
-import fbButton from '/images/fbButton.png';
-import tikTokButton from '/images/tiktok-button.png';
+import igButton from '/public/images/igButton.png';
+import fbButton from '/public/images/fbButton.png';
+import tikTokButton from '/public/images/tiktok-button.png';
 
 export default function SocialButtons() {
     return (

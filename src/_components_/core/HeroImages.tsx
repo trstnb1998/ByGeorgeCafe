@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
 import Image, { StaticImageData } from 'next/image';
 
-import byGeorgeMascot from '/images/by-george-mascot.png';
-import milkshake from '/images/milkshake.png';
-import doorDash from '/images/door-dash.png';
-import uberEats from '/images/uber-eats.png';
+import byGeorgeMascot from '/public/images/by-george-mascot.png';
+import milkshake from '/public/images/milkshake.png';
+import doorDash from '/public/images/door-dash.png';
+import uberEats from '/public/images/uber-eats.png';
 
 import SocialButtons from './SocialButtons';
 
