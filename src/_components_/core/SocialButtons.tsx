@@ -2,7 +2,7 @@ import { Box, Link } from "@mui/material";
 import Image from "next/image";
 import igButton from '/public/images/igButton.png';
 import fbButton from '/public/images/fbButton.png';
-import tikTokButton from '/public/images/tiktok-button.png';
+import tikTokButton from '/public/images/tikTokButton.png';
 
 export default function SocialButtons() {
     return (

@@ -2,7 +2,7 @@ import MenuListItem from "./MenuListItem"
 import { Box, Typography } from "@mui/material"
 import Image from "next/image"
 
-import largeMascot from '/public/images/large-mascot.png';
+import largeMascot from '/public/images/largeMascot.png';
 
 export default function Menu() {
     return (
