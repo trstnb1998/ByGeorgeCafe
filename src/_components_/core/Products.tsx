@@ -3,14 +3,14 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2';
 import Image from 'next/image'
-import hotHoney from '/public/_assets_/images/hotHoney.png';
-import decafEspresso from '/public/_assets_/images/decafEspresso.png';
-import pioneer from '/public/_assets_/images/pioneer.png';
-import chaiBlend from '/public/_assets_/images/chaiBlend.png';
-import binoCup from '/public/_assets_/images/binoCup.png';
-import caminoCup from '/public/_assets_/images/caminoCup.png';
-import dripper from '/public/_assets_/images/dripper.png';
-import dripperFilter from '/public/_assets_/images/dripperFilter.png';
+import hotHoney from '/public/images/hotHoney.png';
+import decafEspresso from '/public/images/decafEspresso.png';
+import pioneer from '/public/images/pioneer.png';
+import chaiBlend from '/public/images/chaiBlend.png';
+import binoCup from '/public/images/binoCup.png';
+import caminoCup from '/public/images/caminoCup.png';
+import dripper from '/public/images/dripper.png';
+import dripperFilter from '/public/images/dripperFilter.png';
 
 export default function Products() {
 

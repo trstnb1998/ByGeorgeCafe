@@ -1,9 +1,9 @@
 import { Typography, Box } from "@mui/material"
 import Image from "next/image"
 
-import bagel from '/public/_assets_/images/bagel.png';
-import cookies from '/public/_assets_/images/cookies.png';
-import sandwich from '/public/_assets_/images/sandwich.png';
+import bagel from '/public/images/bagel.png';
+import cookies from '/public/images/cookies.png';
+import sandwich from '/public/images/sandwich.png';
 
 export default function Staples() {
     return (
