@@ -1,8 +1,8 @@
 import { Typography, Box } from "@mui/material";
 import Image from "next/image";
 
-import doorDash from '@/_assets_/images/doorDash.png';
-import uberEats from '@/_assets_/images/uberEats.png';
+import doorDash from '/public/_assets_/images/doorDash.png';
+import uberEats from '/public/_assets_/images/uberEats.png';
 import Menu from "./Menu";
 
 export default function MenuSection() {
