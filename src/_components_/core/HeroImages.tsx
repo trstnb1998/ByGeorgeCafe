@@ -1,134 +1,122 @@
 import { Box } from '@mui/material';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import byGeorgeMascot from '@/_assets_/images/byGeorgeMascot.png';
-import holdCoffee from '@/_assets_/images/holdCoffee.png';
+import milkshake from '@/_assets_/images/milkshake.png';
 import doorDash from '@/_assets_/images/doorDash.png';
 import uberEats from '@/_assets_/images/uberEats.png';
 
 import SocialButtons from './SocialButtons';
 
+const IMAGE_WIDTH = "84px";
+
+const DeliveryImage = ({ src, alt, ...rest }: { src: string | StaticImageData, alt: string, sx?: object }) => (
+    <Box {...rest}>
+        <Image src={src} alt={alt} style={{ height: "84px", width: IMAGE_WIDTH }} />
+    </Box>
+);
+
+const DeliveryImages = ({ ...rest }) => {
+    return (
+        <Box {...rest} sx={{
+            paddingX: 4,
+            display: "flex",
+            justifyContent: {
+                xs: "space-between",
+                sm: "space-between",
+            },
+            flex: { xs: 1, md: "0 1 auto" },
+            width: { xs: "100%", md: "auto" },
+            flexDirection: { xs: "row", md: "column" },
+            alignSelf: "flex-end"
+
+        }}>
+            <DeliveryImage src={uberEats} alt="Uber Eats" />
+            <DeliveryImage src={doorDash} alt="Door Dash" sx={{
+                marginTop: {
+                    xs: 0,
+                    md: -4
+                },
+                marginLeft: {
+                    xs: 0,
+                    md: IMAGE_WIDTH
+                },
+            }} />
+        </Box>
+    )
+}
 
 export default function HeroImages() {
     return (
         <Box sx={{
+            position: "relative",
             display: "flex",
-            paddingTop: 8,
+            width: "100%",
+            paddingBottom: 8,
             flexDirection: {
                 xs: "column-reverse",
-                sm: "column"
-            }
+                sm: "column-reverse",
+                md: "row",
+            },
+            justifyContent: "space-between"
         }}>
-            <Box>
-                <Box sx={{ position: "relative" }}>
-                    <Box sx={{ position: "absolute", bottom: -10, left: "50%", transform: "translateX(-50%)", marginTop: 3.5 }}>
-                        <Image src={holdCoffee} alt="holdCoffee" style={{ height: 525, width: 522 }} />
-                    </Box>
-                    <Box sx={{ display: "flex", gap: "53px", marginLeft: "53px" }}>
-                        {Array.from({ length: 32 }, (_, index) => (
-                            <Image key={index} src={byGeorgeMascot} alt="By George Mascot" />
-                        ))}
-                    </Box>
-                    <Box sx={{ display: "flex", gap: "53px" }}>
-                        {Array.from({ length: 32 }, (_, index) => (
-                            <Image key={index} src={byGeorgeMascot} alt="By George Mascot" />
-                        ))}
-                    </Box>
-                    <Box sx={{ display: "flex", gap: "53px", marginLeft: "53px" }}>
-                        {Array.from({ length: 32 }, (_, index) => (
-                            <Image key={index} src={byGeorgeMascot} alt="By George Mascot" />
-                        ))}
-                    </Box>
-                    <Box sx={{ display: "flex", gap: "53px" }}>
-                        {Array.from({ length: 32 }, (_, index) => (
-                            <Image key={index} src={byGeorgeMascot} alt="By George Mascot" />
-                        ))}
-                    </Box>
-                    <Box sx={{
-                        display: {
-                            xs: "flex",
-                            sm: "none"
-                        },
-                        gap: "53px",
-                        marginLeft: "53px"
-                    }}>
-                        {Array.from({ length: 32 }, (_, index) => (
-                            <Image key={index} src={byGeorgeMascot} alt="By George Mascot" />
-                        ))}
-                    </Box>
-                    <Box sx={{
-                        display: {
-                            xs: "flex",
-                            sm: "none"
-                        },
-                        gap: "53px"
-                    }}>
-                        {Array.from({ length: 32 }, (_, index) => (
-                            <Image key={index} src={byGeorgeMascot} alt="By George Mascot" />
-                        ))}
-                    </Box>
-                    <Box sx={{
-                        display: {
-                            xs: "flex",
-                            sm: "none"
-                        },
-                        gap: "53px",
-                        marginLeft: "53px"
-                    }}>
-                        {Array.from({ length: 32 }, (_, index) => (
-                            <Image key={index} src={byGeorgeMascot} alt="By George Mascot" />
-                        ))}
-                    </Box>
-                </Box>
 
-                <Box sx={{
-                    display: "flex",
-                    flexDirection: {
-                        xs: "row",
-                        sm: "column"
-                    },
-                    paddingTop: { xs: "1em", sm: "4em" },
-                    paddingLeft: {
-                        xs: 0,
-                        sm: "64px"
-                    },
-                    marginLeft: {
-                        xs: "2rem",
-                        sm: 0
-                    },
-                    marginRight: {
-                        xs: "2rem",
-                        sm: 0
-                    },
-                    justifyContent: "space-between"
-                }}>
-                    <Box sx={{ xs: "-50px", sm: 0 }}>
-                        <Image src={uberEats} alt="Uber Eats" style={{ height: "84px", width: "84px" }} />
-                    </Box>
-                    <Box sx={{ marginLeft: { xs: 0, sm: "6em" }, marginTop: { xs: 0, sm: "-20px" } }}>
-                        <Image src={doorDash} alt="Door Dash" style={{ height: "84px", width: "84px" }} />
-                    </Box>
-                </Box>
-            </Box>
+            {/* BG Banner */}
+            <Box sx={{
+                position: "absolute",
+                zIndex: -1,
+                top: {
+                    xs: 64,
+                    md: 0,
+                },
+                left: 0,
+                right: 0,
+                content: '""',
 
+                display: "flex",
+                flex: 1,
+                alignItems: "center",
+                flexDirection: "column",
+                height: {
+                    sm: 500,
+                    md: "auto"
+                },
+                minHeight: {
+                    xs: 500,
+                    md: 300
+                },
+                backgroundImage: `url(${byGeorgeMascot.src})`,
+                backgroundRepeat: {
+                    xs: "no-repeat round",
+                    sm: "no-repeat round",
+                    md: "repeat-x"
+                },
+                backgroundSize: {
+                    md: "fill"
+                }
+            }} />
+
+            {/* Delivery Images */}
+            <DeliveryImages />
+
+            {/* Milkshake Cup */}
             <Box sx={{
                 display: "flex",
-                justifyContent: {
-                    xs: "center",
-                    sm: "flex-end"
-                },
-                marginRight: {
+                justifyContent: "center",
+                paddingTop: 4,
+                marginBottom: {
                     xs: 0,
-                    sm: "5rem"
+                    md: -8
                 },
-                marginTop: {
-                    xs: "-3em",
-                    sm: "-5em"
-                },
-                marginBottom: "2rem"
+                paddingX: {
+                    xs: 12,
+                }
             }}>
-                <SocialButtons />
+                <Image src={milkshake} alt="milkshake" style={{ height: "auto", maxWidth: 520, minWidth: 440, width: "100%" }} />
             </Box>
-        </Box >
-    )
+
+            {/* Social Icons */}
+            <SocialButtons />
+        </Box>
+    );
 }

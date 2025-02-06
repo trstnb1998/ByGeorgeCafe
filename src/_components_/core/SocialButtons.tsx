@@ -6,7 +6,21 @@ import tikTokButton from '@/_assets_/images/tikTokButton.png';
 
 export default function SocialButtons() {
     return (
-        <Box gap={2} sx={{ display: "flex" }}>
+        <Box gap={2} sx={{
+            display: "flex",
+            alignSelf: "flex-end",
+            width: {
+                xs: "100%",
+                sm: "100%",
+                md: "auto"
+            },
+            justifyContent: "center",
+            marginBottom: 4,
+            paddingX: {
+                xs: 0,
+                md: 8
+            }
+        }}>
             <Link href="https://www.tiktok.com/@bygeorgecoffee" target="_blank">
                 <Image src={tikTokButton} alt="Tik Tok" style={{ height: "40px", width: "40px", borderRadius: "13px", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.7)" }} />
             </Link>

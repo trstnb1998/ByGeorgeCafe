@@ -3,14 +3,17 @@ import HeroImages from "./HeroImages";
 import WaveShape from "./WaveSVG";
 
 export default function HeroSection() {
+    const waveMask = "radial-gradient(34.99px at 50% calc(100% - 48px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%, radial-gradient(34.99px at 50% calc(100% + 18px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x";
     return (
         <Box
             sx={{
-                height: { xs: "900px", sm: "864px" },
                 width: "100%",
                 backgroundColor: "custom.beige",
                 position: "relative",
-                overflow: "hidden"
+
+                "--mask": waveMask,
+                "webkitMask": waveMask,
+                "mask": waveMask,
             }}
         >
             <Typography
@@ -19,33 +22,35 @@ export default function HeroSection() {
                     textAlign: "center",
                     fontSize: {
                         xs: "50px",
-                        sm: "120px",
+                        sm: "76px",
                         md: "130px",
                     },
                     fontWeight: {
                         xs: 800,
-                        sm: 400
+                        md: 400
                     },
                     color: "custom.red",
                     borderRadius: "4px",
                     padding: "4px",
                     fontFamily: {
-                        sm: "Pacifico"
+                        xs: "Inter",
+                        md: "Pacifico"
                     },
                     textTransform: {
                         xs: "uppercase",
-                        sm: "none"
+                        md: "none"
                     },
                     marginTop: {
                         xs: "1rem"
+                    },
+                    paddingBottom: {
+                        xs: 4,
+                        md: 8
                     }
                 }}>
                 By George
             </Typography>
             <HeroImages />
-            <Box sx={{ position: "absolute", bottom: 0, left: 0, right: 0 }}>
-                <WaveShape color="white" />
-            </Box>
         </Box>
     );
 }

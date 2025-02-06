@@ -14,6 +14,11 @@ import dripperFilter from '@/_assets_/images/dripperFilter.png';
 
 export default function Products() {
 
+    const imageSize = {
+        width: "100%",
+        height: "100%"
+    }
+
     const products = [
         {
             id: 1,
@@ -21,7 +26,7 @@ export default function Products() {
             name: "Quinby's Chilli Honey",
             variation: "200ml",
             price: "Price available on call",
-            image: <Image src={hotHoney} alt="Hot Honey" />
+            image: <Image src={hotHoney} alt="Hot Honey" style={imageSize} />
         },
         {
             id: 2,
@@ -29,39 +34,39 @@ export default function Products() {
             name: "Mexico MW Decaf",
             variation: "250g/1kg",
             price: "Price available on call",
-            image: <Image src={decafEspresso} alt="Decaf Espresso" />
+            image: <Image src={decafEspresso} alt="Decaf Espresso" style={imageSize} />
         },
         {
             id: 3,
-            item: "FRESKO Bino Re-usable cup",
-            name: "Bino cup",
-            variation: "8oz",
-            price: "Price available on call",
-            image: <Image src={binoCup} alt="Bino Cup" />
-        },
-        {
-            id: 4,
-            item: "FRESKO Camino Re-usable cup",
-            name: "Camino cup",
-            variation: "12oz",
-            price: "Price available on call",
-            image: <Image src={caminoCup} alt="Camino Cup" />
-        },
-        {
-            id: 5,
             item: "P&R Pioneer Blend",
             name: "Pioneer",
             variation: "250g/1kg",
             price: "Price available on call",
-            image: <Image src={pioneer} alt="Pioneer Coffee Blend" />
+            image: <Image src={pioneer} alt="Pioneer Coffee Blend" style={imageSize} />
         },
         {
-            id: 6,
+            id: 4,
             item: "PRANA Chai Original Blend",
             name: "Chai Original Blend",
             variation: "250g/1kg",
             price: "Price available on call",
-            image: <Image src={chaiBlend} alt="Chai Blend" />
+            image: <Image src={chaiBlend} alt="Chai Blend" style={imageSize} />
+        },
+        {
+            id: 5,
+            item: "FRESKO Bino Re-usable cup",
+            name: "Bino cup",
+            variation: "8oz",
+            price: "Price available on call",
+            image: <Image src={binoCup} alt="Bino Cup" style={imageSize} />
+        },
+        {
+            id: 6,
+            item: "FRESKO Camino Re-usable cup",
+            name: "Camino cup",
+            variation: "12oz",
+            price: "Price available on call",
+            image: <Image src={caminoCup} alt="Camino Cup" style={imageSize} />
         },
         {
             id: 7,
@@ -69,7 +74,7 @@ export default function Products() {
             name: "V60 Coffee Dripper",
             variation: "Plastic",
             price: "Price available on call",
-            image: <Image src={dripper} alt="V60 Coffee Dripper" />
+            image: <Image src={dripper} alt="V60 Coffee Dripper" style={imageSize} />
         },
         {
             id: 8,
@@ -77,83 +82,22 @@ export default function Products() {
             name: "V60 Coffee Dripper filter ",
             variation: "100 pc",
             price: "Price available on call",
-            image: <Image src={dripperFilter} alt="V60 Coffee Dripper Filter" />
+            image: <Image src={dripperFilter} alt="V60 Coffee Dripper Filter" style={imageSize} />
         }
     ]
+
     return (
-        <>
-            {/* <Box sx={{ width: "60%" }} >
-                <Grid container spacing={2} direction={'row'} columns={2}>
-                    {products.map((product) => (
-                        <Grid key={product.id}>
-                            <Box>
-                                <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                                    {product.image}
-                                </Box>
-                                <Box sx={{ flexDirection: "row", width: "85%" }}>
-                                    <Typography sx={{ textAlign: "center", color: "custom.white" }}>{product.item}</Typography>
-                                </Box>
-                            </Box>
-                        </Grid>
-                    ))}
+        <Grid container spacing={4} width={{ xs: "22rem", md: "870px" }} >
+            {products.map((product) => (
+                <Grid key={product.id} size={{ xs: 6, md: 3 }}>
+                    <Box sx={{ flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                        <Box sx={{ textAlign: "center" }}>
+                            {product.image}
+                        </Box>
+                        <Typography sx={{ textAlign: "center", color: "custom.white", marginTop: "1em" }}>{product.item}</Typography>
+                    </Box>
                 </Grid>
-            </Box > */}
-
-            <Box sx={{ flexGrow: 1, width: "55em" }}>
-                <Grid container spacing={2} columns={{ xs: 2, sm: 2, md: 4 }}>
-                    {products.map((product) => (
-                        <Box key={product.id} sx={{ flexDirection: "column" }}>
-                            <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                                {product.image}
-                            </Box>
-                            <Box sx={{ width: "85%" }}>
-                                <Typography sx={{ textAlign: "center", color: "custom.white" }}>{product.item}</Typography>
-                            </Box>
-                        </Box>
-                    ))}
-                </Grid>
-            </Box>
-            {/* <Box sx={{ display: "flex", flexDirection: { xs: "column", lg: "row" }, gap: 2 }}>
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                    <Box sx={{ display: "flex", flexDirection: "row", gap: 2 }}>
-                        <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                            <Image src={hotHoney} alt="Hot Honey" style={{ height: "100%", width: "100%" }} />
-                        </Box>
-                        <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                            <Image src={decafEspresso} alt="Decaf Espresso" style={{ height: "100%", width: "100%" }} />
-                        </Box>
-                    </Box>
-
-                    <Box sx={{ display: "flex", flexDirection: "row", gap: 2 }}>
-                        <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                            <Image src={binoCup} alt="Bino Cup" style={{ height: "100%", width: "100%" }} />
-                        </Box>
-                        <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                            <Image src={caminoCup} alt="Camino Cup" style={{ height: "100%", width: "100%" }} />
-                        </Box>
-                    </Box>
-                </Box>
-
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                    <Box sx={{ display: "flex", flexDirection: "row", gap: 2 }}>
-                        <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                            <Image src={pioneer} alt="Pioneer Blend" style={{ height: "100%", width: "100%" }} />
-                        </Box>
-                        <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                            <Image src={chaiBlend} alt="Chai Blend" style={{ height: "100%", width: "100%" }} />
-                        </Box>
-                    </Box>
-
-                    <Box sx={{ display: "flex", flexDirection: "row", gap: 2 }}>
-                        <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                            <Image src={dripper} alt="Coffee Dripper" style={{ height: "100%", width: "100%" }} />
-                        </Box>
-                        <Box sx={{ width: "auto", height: { xs: "190px", lg: "205px" } }}>
-                            <Image src={dripperFilter} alt="Drip Filter" style={{ height: "100%", width: "100%" }} />
-                        </Box>
-                    </Box>
-                </Box>
-            </Box > */}
-        </>
+            ))}
+        </Grid>
     )
 }

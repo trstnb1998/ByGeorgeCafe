@@ -3,9 +3,9 @@ import theme from "./theme";
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 
 import NavBar from "@/_components_/core/Navbar";
-import HeroSection from "@/_components_/core/Hero";
+import HeroSection from "@/_components_/core/HeroSection";
 import Staples from "@/_components_/core/Staples";
-import InstaSection from "@/_components_/core/Instagram";
+import GallerySection from "@/_components_/core/GallerySection";
 import Menu from "@/_components_/core/MenuSection";
 import ProductSection from "@/_components_/core/ProductSection";
 
@@ -19,7 +19,7 @@ export default function Home() {
                 <NavBar />
                 <HeroSection />
                 <Staples />
-                <InstaSection />
+                <GallerySection />
                 <Menu />
                 <ProductSection />
             </Box>
