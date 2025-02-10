@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Typography, Box } from '@mui/material'
 import WaveShape2 from './WaveSVG2'
 import WaveShape3 from './WaveSVG3'
 import ProductInfo from './ProductInfo'
 import Products from './Products'
+import { Product } from './ProductInfo'
 
 export default function ProductSection() {
+    const [hoveredProduct, setHoveredProduct] = useState<Product | null>(null)
     return (
         <>
             <Box sx={{ marginBottom: "-2px", overflow: "hidden" }}>
                 <WaveShape2 />
             </Box>
             <Box sx={{ display: "flex", width: "100%", backgroundColor: "custom.red", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column-reverse", lg: "row" }, paddingX: "1em" }}>
-                <ProductInfo />
+                <ProductInfo hoveredProduct={hoveredProduct} />
                 <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginLeft: { xs: 0, md: "5%" } }}>
                     <Box sx={{
                         width: "100%",
@@ -33,7 +35,8 @@ export default function ProductSection() {
                             Merch & Products
                         </Typography>
                     </Box>
-                    <Products />
+                    <Products setHoveredProduct={setHoveredProduct} />
+                    <Typography sx={{ alignSelf: "flex-start", color: "custom.white", fontSize: "20px", fontWeight: 200 }}>Disclaimer: In-store stock may vary, please call ahead</Typography>
                 </Box>
             </Box>
             <Box sx={{ marginTop: "-2px", overflow: "hidden" }}>

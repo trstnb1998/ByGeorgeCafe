@@ -7,7 +7,7 @@ import HeroSection from "@/_components_/core/HeroSection";
 import Staples from "@/_components_/core/Staples";
 import GallerySection from "@/_components_/core/GallerySection";
 import Menu from "@/_components_/core/MenuSection";
-import ProductSection from "@/_components_/core/ProductSection";
+import ProductSection from "@/_components_/core/RetailSection";
 
 export default function Home() {
     return (

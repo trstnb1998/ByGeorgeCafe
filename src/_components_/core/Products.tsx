@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Box, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2';
@@ -11,13 +11,17 @@ import binoCup from '../../../public/images/binoCup.png';
 import caminoCup from '../../../public/images/caminoCup.png';
 import dripper from '../../../public/images/dripper.png';
 import dripperFilter from '../../../public/images/dripperFilter.png';
+import { Product } from './ProductInfo';
 
-export default function Products() {
+export type ProductProps = {
+    setHoveredProduct: React.Dispatch<React.SetStateAction<Product | null>>;
+}
+export default function Products({ setHoveredProduct }: ProductProps) {
 
     const imageSize = {
         width: "100%",
         height: "100%"
-    }
+    };
 
     const products = [
         {
@@ -88,10 +92,14 @@ export default function Products() {
 
     return (
         <Grid container spacing={4} width={{ xs: "22rem", md: "870px" }} >
-            {products.map((product) => (
+            {products.map((product: any) => (
                 <Grid key={product.id} size={{ xs: 6, md: 3 }}>
                     <Box sx={{ flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-                        <Box sx={{ textAlign: "center" }}>
+                        <Box
+                            onMouseEnter={() => setHoveredProduct(product)}
+                            onMouseLeave={() => setHoveredProduct(null)}
+                            sx={{ textAlign: "center" }}
+                        >
                             {product.image}
                         </Box>
                         <Typography sx={{ textAlign: "center", color: "custom.white", marginTop: "1em" }}>{product.item}</Typography>
