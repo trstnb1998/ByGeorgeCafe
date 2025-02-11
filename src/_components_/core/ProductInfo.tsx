@@ -18,11 +18,13 @@ export default function ProductInfo({ hoveredProduct }: ProductInfoProps) {
         <Box sx={{
             display: "flex",
             width: "310px",
-            height: "730px",
+            height: { xs: "350px", md: "730px" },
             backgroundColor: "custom.white",
             marginTop: "5em",
             alignItems: "center",
-            flexDirection: "column"
+            flexDirection: "column",
+            marginBottom: "4em",
+            boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.5)"
         }}>
             {/* Logo */}
             <Box sx={{ marginTop: "3em" }}>
@@ -62,7 +64,7 @@ export default function ProductInfo({ hoveredProduct }: ProductInfoProps) {
                 </Typography>
             </Box>
 
-            <Box sx={{ display: "flex", flexDirection: "column", width: 265, height: 230, marginTop: "70px", justifyContent: "space-between" }}>
+            <Box sx={{ display: { xs: "none", md: "flex" }, flexDirection: "column", width: 265, height: 230, marginTop: "70px", justifyContent: "space-between" }}>
                 <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", borderBottom: "1px dashed black", paddingBottom: "1em" }}>
                     <Typography sx={{ fontWeight: 300 }}>Name</Typography>
                     <Typography sx={{ fontWeight: 300 }}>
@@ -88,7 +90,7 @@ export default function ProductInfo({ hoveredProduct }: ProductInfoProps) {
                     </Typography>
                 </Box>
             </Box>
-            <Box sx={{ width: 265, marginTop: "20px" }}>
+            <Box sx={{ width: 265, marginTop: "20px", paddingBottom: "1em" }}>
                 <Box sx={{ borderBottom: "1px dashed black" }}>
                     <Typography sx={{ fontSize: "13px", fontWeight: 300 }}>MORE ITEMS AVAILABLE IN STORE</Typography>
                 </Box>

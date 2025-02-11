@@ -6,16 +6,19 @@ import ProductInfo from './ProductInfo'
 import Products from './Products'
 import { Product } from './ProductInfo'
 
-export default function ProductSection() {
+export default function RetailSection() {
     const [hoveredProduct, setHoveredProduct] = useState<Product | null>(null)
     return (
         <>
-            <Box sx={{ marginBottom: "-2px", overflow: "hidden" }}>
+            <Box sx={{
+                marginBottom: "-2px",
+                overflow: "hidden"
+            }}>
                 <WaveShape2 />
             </Box>
-            <Box sx={{ display: "flex", width: "100%", backgroundColor: "custom.red", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column-reverse", lg: "row" }, paddingX: "1em" }}>
+            <Box sx={{ display: "flex", width: "100vw", maxWidth: "100%", overflowX: "hidden", backgroundColor: "custom.red", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column-reverse", lg: "row" }, paddingX: "1em" }}>
                 <ProductInfo hoveredProduct={hoveredProduct} />
-                <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginLeft: { xs: 0, md: "5%" } }}>
+                <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingLeft: { xs: 0, md: "5%", } }}>
                     <Box sx={{
                         width: "100%",
                         height: "60px",
@@ -36,10 +39,13 @@ export default function ProductSection() {
                         </Typography>
                     </Box>
                     <Products setHoveredProduct={setHoveredProduct} />
-                    <Typography sx={{ alignSelf: "flex-start", color: "custom.white", fontSize: "20px", fontWeight: 200 }}>Disclaimer: In-store stock may vary, please call ahead</Typography>
+                    <Typography sx={{ alignSelf: "flex-start", color: "custom.white", fontSize: "20px", fontWeight: 200, paddingTop: "2em", display: { xs: "none", lg: "block" } }}>Disclaimer: In-store stock may vary, please call ahead</Typography>
                 </Box>
             </Box>
-            <Box sx={{ marginTop: "-2px", overflow: "hidden" }}>
+            <Box sx={{
+                marginTop: "-2px",
+                overflow: "hidden"
+            }}>
                 <WaveShape3 />
             </Box>
         </>

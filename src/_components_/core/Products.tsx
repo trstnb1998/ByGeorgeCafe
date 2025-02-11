@@ -91,7 +91,7 @@ export default function Products({ setHoveredProduct }: ProductProps) {
     ]
 
     return (
-        <Grid container spacing={4} width={{ xs: "22rem", md: "870px" }} >
+        <Grid container spacing={4} width={{ xs: "22rem", md: "870px" }}>
             {products.map((product: any) => (
                 <Grid key={product.id} size={{ xs: 6, md: 3 }}>
                     <Box sx={{ flexDirection: "column", justifyContent: "center", alignItems: "center" }}>

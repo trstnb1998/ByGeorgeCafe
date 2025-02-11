@@ -10,6 +10,7 @@ export default function HeroSection() {
                 width: "100%",
                 backgroundColor: "custom.beige",
                 position: "relative",
+                overflowX: "hidden",
 
                 "--mask": waveMask,
                 "webkitMask": waveMask,
@@ -51,6 +52,12 @@ export default function HeroSection() {
                 By George
             </Typography>
             <HeroImages />
+            {/* <Box sx={{
+                marginTop: "-2px",
+                overflow: "hidden"
+            }}>
+                <WaveShape />
+            </Box> */}
         </Box>
     );
 }
