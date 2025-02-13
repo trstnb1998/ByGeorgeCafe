@@ -18,7 +18,7 @@ export default function Home() {
             <Box sx={{
                 display: "flex", width: "100svw", flexDirection: "column"
             }}>
-                <NavBar />
+                <NavBar backgroundColor="custom.red" textColor="custom.white"/>
                 <HeroSection />
                 <Staples />
                 <GallerySection />
@@ -26,7 +26,7 @@ export default function Home() {
                 <ProductSection />
                 <InquiriesSection />
                 <Map />
-                <NavBar />
+                <NavBar backgroundColor="custom.beige" textColor="custom.red"/>
             </Box>
         </ThemeProvider >
     );

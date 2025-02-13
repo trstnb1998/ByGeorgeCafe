@@ -1,7 +1,12 @@
 import { Typography, Box, List } from "@mui/material"
 import NavListItem from "./NavListItem"
+export type NavBarProps = {
+    backgroundColor: string;
+    textColor: string;
+}
 
-export default function NavBar() {
+
+export default function NavBar({ backgroundColor, textColor }: NavBarProps) {
     return (
         <Box sx={{
             display: "flex",
@@ -13,17 +18,17 @@ export default function NavBar() {
                 sm: "100px",
                 md: "70px"
             },
-            backgroundColor: "custom.red",
+            backgroundColor: backgroundColor,
             alignItems: "center",
             flexDirection: {
                 xs: "column",
                 sm: "column",
                 md: "row"
-            }
+            },
+            color: textColor
         }}>
             <Box>
                 <Typography sx={{
-                    color: "custom.white",
                     fontSize: "18px",
                     fontFamily: "Pacifico",
                     paddingLeft: {

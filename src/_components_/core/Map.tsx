@@ -32,7 +32,7 @@ export default function Map() {
           flexDirection: "column",
         }}
       >
-        <Box sx={{ color: "custom.red",}}>
+        <Box sx={{ color: "custom.red", justifyContent: "space-around", alignItems: "space-around", display: "flex", flexDirection: "column"}}>
           <Typography sx={{ fontSize: "32px", fontWeight: 400}}>
             Mon - Sat
             <br />| 6:00am - 2:30pm

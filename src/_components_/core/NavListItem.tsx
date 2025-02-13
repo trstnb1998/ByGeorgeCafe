@@ -17,7 +17,6 @@ export default function NavListItem({ title }: ListItemComponentProperties) {
                             sm: "18px"
                         },
                         fontWeight: "500",
-                        color: "custom.white",
                         marginLeft: {
                             xs: 0,
                             sm: "13px"
