@@ -1,7 +1,7 @@
 "use client"
 import theme from "./theme";
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
-
+import Head from "next/head";
 import NavBar from "@/_components_/core/Navbar";
 import HeroSection from "@/_components_/core/HeroSection";
 import Staples from "@/_components_/core/Staples";
@@ -14,11 +14,14 @@ import Map from "@/_components_/core/Map";
 export default function Home() {
     return (
         <ThemeProvider theme={theme}>
+            <Head>
+                <title>By George Coffee</title>
+            </Head>
             <CssBaseline />
             <Box sx={{
                 display: "flex", width: "100svw", flexDirection: "column"
             }}>
-                <NavBar backgroundColor="custom.red" textColor="custom.white"/>
+                <NavBar backgroundColor="custom.red" textColor="custom.white" />
                 <HeroSection />
                 <Staples />
                 <GallerySection />
@@ -26,7 +29,7 @@ export default function Home() {
                 <ProductSection />
                 <InquiriesSection />
                 <Map />
-                <NavBar backgroundColor="custom.beige" textColor="custom.red"/>
+                <NavBar backgroundColor="custom.beige" textColor="custom.red" />
             </Box>
         </ThemeProvider >
     );

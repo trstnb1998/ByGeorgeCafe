@@ -6,6 +6,7 @@ import {
   Select,
   TextField,
   Typography,
+  InputLabel
 } from "@mui/material";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -38,35 +39,40 @@ export default function InquiriesSection() {
               borderRadius: 2,
               flexDirection: "column",
               alignItems: "center",
+              height: "265px",
+              position: "relative"
             }}
           >
-            <Typography sx={{ alignSelf: "flex-start" }}>
+            <Typography sx={{ alignSelf: "flex-start", position: "absolute", top: "1em", marginLeft: "2em" }}>
               Select date
             </Typography>
             <Box
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
+                borderBottom: "1px solid lightgrey",
+                width: "100%"
               }}
             >
               <Typography
                 sx={{
                   fontSize: "32px",
                   fontWeight: 400,
-                  borderBottom: "1px solid lightgrey",
+                  marginLeft: "1em"
                 }}
               >
                 Enter date
               </Typography>
-              <TodayIcon />
+              <TodayIcon sx={{ marginTop: "10px", marginRight: "1em" }} />
             </Box>
 
-            <DateField sx={{ width: "90%" }} />
+            <DateField sx={{ width: "90%", marginTop: "2em" }} />
           </Box>
           <TextField
             multiline
+            rows={10}
             label="Details"
-            sx={{ height: "260px", width: "600px" }}
+            sx={{ height: "260px", width: "600px", marginTop: "3em" }}
           />
         </Box>
         <Box
@@ -79,7 +85,8 @@ export default function InquiriesSection() {
             justifyContent: "space-around",
           }}
         >
-          <Select label="Reason for Inquiry">
+          <Select>
+            <InputLabel>Reason for Inquiry</InputLabel>
             <MenuItem>Catering</MenuItem>
             <MenuItem>Feedback</MenuItem>
             <MenuItem>Questions</MenuItem>
@@ -89,7 +96,7 @@ export default function InquiriesSection() {
 
           <TextField label="Name" />
           <TextField label="Email" />
-          <TextField label="Ph" />
+          <TextField type="number" label="Ph" />
           <TextField label="Number of people" />
           <Button
             sx={{
