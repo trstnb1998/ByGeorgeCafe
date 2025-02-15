@@ -36,7 +36,7 @@ export default function InquiriesSection() {
               justifyContent: "center",
               width: "600px",
               border: "1px solid lightgrey",
-              borderRadius: 2,
+              borderRadius: 3,
               flexDirection: "column",
               alignItems: "center",
               height: "265px",
@@ -50,7 +50,7 @@ export default function InquiriesSection() {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                borderBottom: "1px solid lightgrey",
+                borderBottom: "1px solid lightgray",
                 width: "100%"
               }}
             >
@@ -66,13 +66,38 @@ export default function InquiriesSection() {
               <TodayIcon sx={{ marginTop: "10px", marginRight: "1em" }} />
             </Box>
 
-            <DateField sx={{ width: "90%", marginTop: "2em" }} />
+            <DateField sx={{
+              width: "90%",
+              marginTop: "2em",
+              "& .MuiOutlinedInput-root": {
+                fieldset: {
+                  borderColor: "custom.red",
+                  borderWidth: 2
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "custom.red",
+                  borderWidth: 3
+                }
+              }
+            }} />
           </Box>
           <TextField
             multiline
-            rows={10}
+            rows={9}
             label="Details"
-            sx={{ height: "260px", width: "600px", marginTop: "3em" }}
+            sx={{
+              width: "600px", marginTop: "3em",
+              ".MuiInputLabel-root": {
+                color: "gray",
+              },
+              " .MuiOutlinedInput-root": {
+                borderRadius: 3,
+                "&.Mui-focused fieldset": {
+                  borderColor: "lightgrey",
+                  borderWidth: 2,
+                }
+              }
+            }}
           />
         </Box>
         <Box
@@ -94,10 +119,50 @@ export default function InquiriesSection() {
             <MenuItem>Other</MenuItem>
           </Select>
 
-          <TextField label="Name" />
-          <TextField label="Email" />
-          <TextField type="number" label="Ph" />
-          <TextField label="Number of people" />
+          <TextField label="Name" sx={{
+            ".MuiInputLabel-root": {
+              color: "grey"
+            },
+            " .MuiOutlinedInput-root": {
+              "&.Mui-focused fieldset": {
+                borderColor: "lightgrey",
+                borderWidth: 2
+              }
+            }
+          }} />
+          <TextField label="Email" sx={{
+            ".MuiInputLabel-root": {
+              color: "grey"
+            },
+            " .MuiOutlinedInput-root": {
+              "&.Mui-focused fieldset": {
+                borderColor: "lightgrey",
+                borderWidth: 2
+              }
+            }
+          }} />
+          <TextField type="number" label="Ph" sx={{
+            ".MuiInputLabel-root": {
+              color: "grey"
+            },
+            " .MuiOutlinedInput-root": {
+              "&.Mui-focused fieldset": {
+                borderColor: "lightgrey",
+                borderWidth: 2
+              }
+            }
+          }} />
+          <TextField label="Number of people" sx={{
+            ".MuiInputLabel-root": {
+              color: "grey"
+            },
+            " .MuiOutlinedInput-root": {
+              "&.Mui-focused fieldset": {
+                borderColor: "lightgrey",
+                borderWidth: 2
+              }
+            }
+          }} />
           <Button
             sx={{
               backgroundColor: "custom.red",
