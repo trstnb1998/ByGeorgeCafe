@@ -26,16 +26,16 @@ export default function GallerySection() {
                 <Box sx={{ display: "flex", flexDirection: { xs: "column", lg: "column-reverse" } }}>
                     <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, padding: "30px", backgroundColor: "custom.beige", width: "fit-content", height: "fit-content", borderRadius: "20px", boxShadow: "4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset" }}>
                         <Box sx={{ display: "flex", flexDirection: { xs: "column", lg: "row" }, gap: "28px" }}>
-                            <Box sx={{ maxWidth: "240px", minWidth: "182px", maxHeight: "240px", minHeight: "182px", backgroundColor: "#E0AFEF", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)" }}>
+                            <Box sx={{ maxWidth: "180px", minWidth: { xs: "240px", lg: "160px" }, maxHeight: "180px", minHeight: { xs: "240px", lg: "160px" }, backgroundColor: "#E0AFEF", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)" }}>
                                 <Image src={pourCoffee} alt="pourCoffee" style={{ height: "100%", width: "100%" }} />
                             </Box>
-                            <Box sx={{ maxWidth: "240px", minWidth: "182px", maxHeight: "240px", minHeight: "182px", backgroundColor: "#FFB8CA", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)" }}>
+                            <Box sx={{ maxWidth: "180px", minWidth: { xs: "240px", lg: "160px" }, maxHeight: "180px", minHeight: { xs: "240px", lg: "160px" }, backgroundColor: "#FFB8CA", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)" }}>
                                 <Image src={pastry1} alt="pastry1" style={{ height: "100%", width: "100%" }} />
                             </Box>
-                            <Box sx={{ maxWidth: "240px", minWidth: "182px", maxHeight: "240px", minHeight: "182px", backgroundColor: "#FFE28A", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)" }}>
+                            <Box sx={{ maxWidth: "180px", minWidth: { xs: "240px", lg: "160px" }, maxHeight: "180px", minHeight: { xs: "240px", lg: "160px" }, backgroundColor: "#FFE28A", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)" }}>
                                 <Image src={pastry2} alt="pastry2" style={{ height: "100%", width: "100%" }} />
                             </Box>
-                            <Box sx={{ maxWidth: "240px", minWidth: "182px", maxHeight: "240px", minHeight: "182px", backgroundColor: "#8DFFDD", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)" }}>
+                            <Box sx={{ maxWidth: "180px", minWidth: { xs: "240px", lg: "160px" }, maxHeight: "180px", minHeight: { xs: "240px", lg: "160px" }, backgroundColor: "#8DFFDD", boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)" }}>
                                 <Image src={cookie} alt="cookie" style={{ height: "100%", width: "auto" }} />
                             </Box>
                         </Box>
