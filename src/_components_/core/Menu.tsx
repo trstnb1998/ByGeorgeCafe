@@ -23,7 +23,7 @@ export default function Menu() {
                         <MenuListItem item="SALMON BAGEL / 16.5" description={"Smoked salmon, tomato & BG cream cheese\n(capers, red onion & dill)"} />
                         <MenuListItem item="BREAKFAST BAGEL / 16.5" description={"Folded scramble eggs, bacon, hash brown, spinach,\nsmashed avo and house-made relish & honey mustard mayo"} />
                         <MenuListItem item="EGGS BENNY BAGEL / 18" description={"Poached eggs spinach on a choice of bacon, mortadella,\nmushroom (v) and smoked salmon + 3"} />
-                        <MenuListItem item="MICKY G’s / 16.5" description={"Poached eggs spinach on a choice of bacon, mortadella,\nmushroom (v) and smoked salmon + 3"} />
+                        <MenuListItem item="MICKY G’s / 16.5" description={"Scrambled egg, Sausage patty, Big G sauce, American cheese and\noptional (but highly recommended) Hot sauce."} />
                         <MenuListItem item="SPAM / 16.5" description={"Grill spam, fried egg, cheese, Big G sauce, sweet soy\nsauce, tabasco"} />
                     </Box>
 

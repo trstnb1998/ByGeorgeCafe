@@ -113,10 +113,11 @@ export default function InquiriesSection() {
                   justifyContent: "center",
                   gap: "40px",
                   width: "100%",
+                  alignItems: "center"
                 }}
               >
                 {/* Left Section - Date & Details */}
-                <Box sx={{ width: { xs: "100%", lg: "50%" }, mt: { xs: "0", lg: "1em" } }}>
+                <Box sx={{ width: { xs: "90%", lg: "50%" }, mt: { xs: "0", lg: "1em" } }}>
                   {/* Date Picker */}
                   <Box
                     sx={{
@@ -136,14 +137,14 @@ export default function InquiriesSection() {
                     </Typography>
                     <Box sx={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid lightgray", width: "100%" }}>
                       <Typography sx={{ fontSize: "32px", fontWeight: 400, ml: "1em", marginTop: "2em" }}>Enter date</Typography>
-                      <TodayIcon sx={{ mt: "10px", mr: "1em" }} />
+                      <TodayIcon sx={{ mt: "3.25em", mr: "1em" }} />
                     </Box>
 
                     <DateField
                       required
                       value={formData.date ? dayjs(formData.date) : null}
                       onChange={handleDateChange}
-                      sx={{ width: "90%", mt: "2em" }}
+                      sx={{ width: "95%", mt: "2em" }}
                     />
                   </Box>
 
@@ -173,7 +174,7 @@ export default function InquiriesSection() {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    width: { xs: "100%", lg: "50%" },
+                    width: { xs: "90%", lg: "50%" },
                     height: "589px",
                     backgroundColor: "white",
                     justifyContent: "space-around",
