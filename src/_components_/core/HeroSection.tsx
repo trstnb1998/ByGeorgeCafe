@@ -3,7 +3,8 @@ import HeroImages from "./HeroImages";
 import WaveShape from "./WaveSVG";
 
 export default function HeroSection() {
-    const waveMask = "radial-gradient(34.99px at 50% calc(100% - 48px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%, radial-gradient(34.99px at 50% calc(100% + 18px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x";
+    const waveMask = "radial-gradient(circle, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 100%)";
+
     return (
         <Box
             sx={{
@@ -52,12 +53,12 @@ export default function HeroSection() {
                 By George
             </Typography>
             <HeroImages />
-            {/* <Box sx={{
+            <Box sx={{
                 marginTop: "-2px",
-                overflow: "hidden"
+                overflow: "hidden",
             }}>
                 <WaveShape />
-            </Box> */}
+            </Box>
         </Box>
     );
 }
