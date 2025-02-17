@@ -117,7 +117,7 @@ export default function InquiriesSection() {
                 }}
               >
                 {/* Left Section - Date & Details */}
-                <Box sx={{ width: { xs: "90%", lg: "50%" }, mt: { xs: "0", lg: "1em" } }}>
+                <Box sx={{ width: { xs: "90%", lg: "50%" } }}>
                   {/* Date Picker */}
                   <Box
                     sx={{
