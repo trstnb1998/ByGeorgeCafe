@@ -6,6 +6,7 @@ import NavListItem from "./NavListItem";
 export type NavBarProps = {
     backgroundColor: string;
     textColor: string;
+    scrolledTextColor: string; // New prop for text color on scroll
     position: string;
     enableOpacity?: boolean; // Optional opacity effect
     enableBoxShadow?: boolean; // Optional shadow effect
@@ -14,27 +15,33 @@ export type NavBarProps = {
 export default function NavBar({
     backgroundColor,
     textColor,
+    scrolledTextColor,
     position,
     enableOpacity = false,
     enableBoxShadow = false,
 }: NavBarProps) {
     const [opacity, setOpacity] = useState(1);
     const [boxShadow, setBoxShadow] = useState("none");
+    const [currentTextColor, setCurrentTextColor] = useState(textColor);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
+
             if (enableOpacity) {
-                setOpacity(scrollY > 50 ? 0.80 : 1);
+                setOpacity(scrollY > 50 ? 0.2 : 1);
             }
+
             if (enableBoxShadow) {
-                setBoxShadow(scrollY > 50 ? "inset  0px 65px 50px rgba(74, 0, 0, 0.9)" : "none");
+                setBoxShadow(scrollY > 50 ? "inset 0px 65px 50px rgba(74, 0, 0, 0.9)" : "none");
             }
+
+            setCurrentTextColor(scrollY > 50 ? scrolledTextColor : textColor);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [enableOpacity, enableBoxShadow]);
+    }, [enableOpacity, enableBoxShadow, textColor, scrolledTextColor]);
 
     return (
         <Box
@@ -47,20 +54,32 @@ export default function NavBar({
                     md: "70px",
                 },
                 position: position,
-                backgroundColor: backgroundColor,
                 alignItems: "center",
                 flexDirection: {
                     xs: "column",
                     sm: "column",
                     md: "row",
                 },
-                color: textColor,
                 zIndex: 2,
-                transition: "opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
-                opacity: enableOpacity ? opacity : 1, // Apply opacity only if enabled
-                boxShadow: enableBoxShadow ? boxShadow : "none", // Apply shadow only if enabled
+                transition: "box-shadow 0.3s ease-in-out, color 0.3s ease-in-out",
             }}
         >
+            {/* Background Box with opacity */}
+            <Box
+                sx={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: backgroundColor,
+                    opacity: enableOpacity ? opacity : 1, // Apply opacity only if enabled
+                    zIndex: -1, // Ensure it's behind the text
+                    boxShadow: enableBoxShadow ? boxShadow : "none",
+                    transition: "opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+                }}
+            ></Box>
+
             <Box>
                 <Typography
                     sx={{
@@ -76,6 +95,7 @@ export default function NavBar({
                             sm: "1rem",
                             md: 0,
                         },
+                        color: currentTextColor, // Apply dynamic text color
                     }}
                 >
                     B.G.
@@ -94,7 +114,7 @@ export default function NavBar({
                     },
                 }}
             >
-                <List sx={{ display: "flex" }}>
+                <List sx={{ display: "flex", color: currentTextColor }}>
                     <Link to="hero" smooth={true} duration={500}>
                         <NavListItem title="Home" />
                     </Link>
