@@ -16,7 +16,7 @@ export default function Home() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <Box>
-                <NavBar backgroundColor="custom.red" textColor="custom.white" />
+                <NavBar backgroundColor="custom.red" textColor="custom.white" position="fixed" enableOpacity={true} enableBoxShadow={true} />
 
                 <Element name="hero">
                     <HeroSection />
@@ -46,7 +46,7 @@ export default function Home() {
                     <Map />
                 </Element>
 
-                <NavBar backgroundColor="custom.beige" textColor="custom.red" />
+                <NavBar backgroundColor="custom.beige" textColor="custom.red" position="relative" />
             </Box>
         </ThemeProvider>
     );

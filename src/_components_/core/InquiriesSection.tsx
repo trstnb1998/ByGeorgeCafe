@@ -142,6 +142,7 @@ export default function InquiriesSection() {
 
                     <DateField
                       required
+                      format="DD-MM-YYYY"
                       value={formData.date ? dayjs(formData.date) : null}
                       onChange={handleDateChange}
                       sx={{ width: "95%", mt: "2em" }}
