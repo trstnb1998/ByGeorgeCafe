@@ -14,9 +14,7 @@ export default function Home() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Box sx={{
-                display: "flex", width: "100svw", flexDirection: "column"
-            }}>
+            <Box>
                 <NavBar backgroundColor="custom.red" textColor="custom.white" />
                 <HeroSection />
                 <Staples />

@@ -19,7 +19,7 @@ export default function GallerySection() {
             }}>
                 <WaveShape2 />
             </Box>
-            <Box sx={{ display: "flex", flexDirection: { xs: "column", lg: "row" }, height: { xs: "1375px", lg: "600px" }, width: "100%", backgroundColor: "custom.red", justifyContent: "center", alignItems: "center" }}>
+            <Box sx={{ display: "flex", flexDirection: { xs: "column", lg: "row" }, height: { xs: "1375px", lg: "600px" }, width: "100%", backgroundColor: "custom.red", justifyContent: "space-around", alignItems: "center" }}>
                 <Box sx={{ lineHeight: "95px" }}>
                     <Typography sx={{ fontSize: "70px", fontWeight: 800, color: "custom.white", marginRight: "140px", lineHeight: "11rem", display: { xs: "none", lg: "flex" } }}>HELLO, <br />GOOD<br />THANKS!</Typography>
                 </Box>

@@ -29,6 +29,7 @@ const DeliveryImages = ({ ...rest }) => {
             width: { xs: "100%", md: "auto" },
             flexDirection: { xs: "row", md: "column" },
             alignSelf: "flex-end",
+            marginTop: { xs: "4em" }
         }}>
             <DeliveryImage src={uberEats} alt="Uber Eats" />
             <DeliveryImage src={doorDash} alt="Door Dash" sx={{
@@ -110,7 +111,8 @@ export default function HeroImages() {
                 },
                 paddingX: {
                     xs: 12,
-                }
+                },
+                marginTop: { xs: "-2em", sm: 0 }
             }}>
                 <Image src={milkshake} alt="milkshake" style={{ height: "auto", maxWidth: 520, minWidth: 440, width: "100%" }} />
             </Box>

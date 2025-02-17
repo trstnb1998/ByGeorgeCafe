@@ -78,95 +78,87 @@ export default function InquiriesSection() {
           alignItems: "center",
           minHeight: "100vh",
           textAlign: "center",
+          px: { xs: 2, md: 0 }, // Padding for mobile
         }}
       >
         <Typography
           sx={{
             fontWeight: 800,
-            fontSize: "75px",
+            fontSize: { xs: "40px", lg: "75px" }, // Responsive text size
             color: "custom.red",
             textAlign: "center",
+            mb: "1em",
           }}
         >
           Inquiries
         </Typography>
         {submitted ? (
-          <Typography sx={{ textAlign: "center", fontSize: "24px", color: "custom.red", marginTop: "5em" }}>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontSize: { xs: "18px", lg: "24px" },
+              color: "custom.red",
+              mt: "3em",
+            }}
+          >
             Thank you! Your inquiry has been submitted.
           </Typography>
         ) : (
-          <form onSubmit={handleSubmit}>
-            <FormControl required>
-              <Box sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "row",
-                gap: "40px",
-              }}>
-                <Box sx={{ marginTop: "1em" }}>
+          <form onSubmit={handleSubmit} style={{ width: "100%", maxWidth: "1200px" }}>
+            <FormControl required fullWidth>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: { xs: "column", lg: "row" }, // Mobile: stacked, Desktop: row
+                  justifyContent: "center",
+                  gap: "40px",
+                  width: "100%",
+                }}
+              >
+                {/* Left Section - Date & Details */}
+                <Box sx={{ width: { xs: "100%", lg: "50%" }, mt: { xs: "0", lg: "1em" } }}>
+                  {/* Date Picker */}
                   <Box
                     sx={{
                       display: "flex",
-                      justifyContent: "center",
-                      width: "600px",
-                      border: "1px solid lightgrey",
-                      borderRadius: 3,
                       flexDirection: "column",
                       alignItems: "center",
+                      width: "100%",
+                      border: "1px solid lightgrey",
+                      borderRadius: 3,
+                      padding: "1em",
                       height: "265px",
                       position: "relative",
                     }}
                   >
-                    <Typography
-                      sx={{ alignSelf: "flex-start", position: "absolute", top: "1em", marginLeft: "2em" }}
-                    >
+                    <Typography sx={{ alignSelf: "flex-start", position: "absolute", top: "1em", ml: "2em" }}>
                       Select date
                     </Typography>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        borderBottom: "1px solid lightgray",
-                        width: "100%",
-                      }}
-                    >
-                      <Typography sx={{ fontSize: "32px", fontWeight: 400, marginLeft: "1em" }}>
-                        Enter date
-                      </Typography>
-                      <TodayIcon sx={{ marginTop: "10px", marginRight: "1em" }} />
+                    <Box sx={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid lightgray", width: "100%" }}>
+                      <Typography sx={{ fontSize: "32px", fontWeight: 400, ml: "1em", marginTop: "2em" }}>Enter date</Typography>
+                      <TodayIcon sx={{ mt: "10px", mr: "1em" }} />
                     </Box>
 
                     <DateField
                       required
                       value={formData.date ? dayjs(formData.date) : null}
                       onChange={handleDateChange}
-                      sx={{
-                        width: "90%",
-                        marginTop: "2em",
-                        "& .MuiOutlinedInput-root": {
-                          fieldset: {
-                            borderColor: "custom.red",
-                            borderWidth: 2,
-                          },
-                          "&.Mui-focused fieldset": {
-                            borderColor: "custom.red",
-                            borderWidth: 3,
-                          },
-                        },
-                      }}
+                      sx={{ width: "90%", mt: "2em" }}
                     />
                   </Box>
+
+                  {/* Details Field */}
                   <TextField
                     required
                     multiline
-                    rows={9}
+                    rows={10}
                     label="Details"
                     name="details"
                     value={formData.details}
                     onChange={handleChange}
                     sx={{
-                      width: "600px",
-                      marginTop: "3em",
+                      width: "100%",
+                      mt: "2em",
                       ".MuiInputLabel-root": { color: "gray" },
                       ".MuiOutlinedInput-root": {
                         borderRadius: 3,
@@ -175,16 +167,19 @@ export default function InquiriesSection() {
                     }}
                   />
                 </Box>
+
+                {/* Right Section - Form Inputs */}
                 <Box
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "640px",
+                    width: { xs: "100%", lg: "50%" },
                     height: "589px",
                     backgroundColor: "white",
                     justifyContent: "space-around",
                   }}
                 >
+                  {/* Inquiry Reason */}
                   <Select
                     required
                     name="inquiryReason"
@@ -193,12 +188,12 @@ export default function InquiriesSection() {
                     displayEmpty
                     renderValue={(selected) => selected || "Reason for inquiry"}
                     sx={{
-                      color: formData.inquiryReason ? "inherit" : "gray", textAlign: "left",
+                      width: "100%",
+                      color: formData.inquiryReason ? "inherit" : "gray",
+                      textAlign: "left",
                     }}
                   >
-                    <MenuItem value="" disabled>
-                      Reason for inquiry
-                    </MenuItem>
+                    <MenuItem value="" disabled>Reason for inquiry</MenuItem>
                     <MenuItem value="Catering">Catering</MenuItem>
                     <MenuItem value="Feedback">Feedback</MenuItem>
                     <MenuItem value="Questions">Questions</MenuItem>
@@ -206,38 +201,12 @@ export default function InquiriesSection() {
                     <MenuItem value="Other">Other</MenuItem>
                   </Select>
 
-                  <TextField
-                    required
-                    label="Name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                  <TextField
-                    required
-                    label="Email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  <TextField
-                    required
-                    label="Phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
-                  <TextField
-                    required
-                    label="Number of people"
-                    name="numPeople"
-                    type="number"
-                    value={formData.numPeople}
-                    onChange={handleChange}
-                  />
+                  <TextField required label="Name" name="name" value={formData.name} onChange={handleChange} fullWidth />
+                  <TextField required label="Email" name="email" type="email" value={formData.email} onChange={handleChange} fullWidth />
+                  <TextField required label="Phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} fullWidth />
+                  <TextField required label="Number of people" name="numPeople" type="number" value={formData.numPeople} onChange={handleChange} fullWidth />
 
+                  {/* Submit Button */}
                   <Button
                     type="submit"
                     sx={{
@@ -249,6 +218,7 @@ export default function InquiriesSection() {
                       textTransform: "capitalize",
                       borderRadius: 2,
                       boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.5)",
+                      width: "100%",
                     }}
                   >
                     Submit

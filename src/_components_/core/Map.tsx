@@ -15,40 +15,6 @@ export default function Map() {
       />
       <Box
         sx={{
-          width: "375px",
-          height: "445px",
-          backgroundColor: "custom.beige",
-          position: "absolute",
-          bottom: "5em",
-          right: "3em",
-          borderRadius: "22px",
-          border: "1px solid #FF2D2D",
-          borderRight: "5px solid #FF2D2D",
-          borderBottom: "5px solid #FF2D2D",
-          boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.5)",
-          justifyContent: "center",
-          alignItems: "center",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Box sx={{ color: "custom.red", justifyContent: "space-around", alignItems: "space-around", display: "flex", flexDirection: "column"}}>
-          <Typography sx={{ fontSize: "32px", fontWeight: 400}}>
-            Mon - Sat
-            <br />| 6:00am - 2:30pm
-          </Typography>
-          <Typography sx={{ fontSize: "32px", fontWeight: 400}}>
-            Sunday
-            <br />| 6:30am - 2:30pm
-          </Typography>
-          <Typography sx={{ fontSize: "32px", fontWeight: 400}}>
-            Public Holidays
-            <br />| Times Vary
-          </Typography>
-        </Box>
-      </Box>
-      <Box
-        sx={{
           display: "flex",
           width: "100%",
           backgroundColor: "custom.red",
@@ -74,8 +40,65 @@ export default function Map() {
             display: { xs: "none", lg: "flex" },
           }}
         >
-           0421 133 819
+          0421 133 819
         </Typography>
+      </Box>
+      <Box
+        sx={{
+          width: { xs: "100%", md: "375px" },
+          height: "445px",
+          backgroundColor: "custom.beige",
+          position: { xs: "relative", md: "absolute" },
+          bottom: { xs: 0, md: "5em" },
+          right: { xs: 0, md: "3em" },
+          borderRadius: "22px",
+          border: { md: "1px solid #FF2D2D" },
+          borderRight: { md: "5px solid #FF2D2D" },
+          borderBottom: { md: "5px solid #FF2D2D" },
+          boxShadow: { md: "4px 4px 4px rgba(0, 0, 0, 0.5)" },
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Box sx={{ color: "custom.red", justifyContent: "space-around", alignItems: "space-around", display: "flex", flexDirection: "column", textAlign: { xs: "center", md: "left" } }}>
+          <Typography sx={{ fontSize: "32px", fontWeight: 400, marginY: "0.25em" }}>
+            Mon - Sat
+            <br />| 6:00am - 2:30pm
+          </Typography>
+          <Typography sx={{ fontSize: "32px", fontWeight: 400, marginY: "0.25em" }}>
+            Sunday
+            <br />| 6:30am - 2:30pm
+          </Typography>
+          <Typography sx={{ fontSize: "32px", fontWeight: 400, marginY: "0.25em" }}>
+            Public Holidays
+            <br />| Times Vary
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: { xs: "flex", md: "none" },
+            width: "100%",
+            backgroundColor: "custom.red",
+            height: "64px",
+            color: "custom.white",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "1em",
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: "26px",
+              fontWeight: 500,
+              textDecoration: "underline",
+            }}
+          >
+            0421 133 819
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
