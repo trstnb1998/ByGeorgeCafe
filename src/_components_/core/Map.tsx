@@ -51,7 +51,7 @@ export default function Map() {
           position: { xs: "relative", md: "absolute" },
           bottom: { xs: 0, md: "5em" },
           right: { xs: 0, md: "3em" },
-          borderRadius: "22px",
+          borderRadius: { xs: 0, md: "22px" },
           border: { md: "1px solid #FF2D2D" },
           borderRight: { md: "5px solid #FF2D2D" },
           borderBottom: { md: "5px solid #FF2D2D" },

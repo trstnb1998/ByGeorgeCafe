@@ -29,7 +29,7 @@ const DeliveryImages = ({ ...rest }) => {
             width: { xs: "100%", md: "auto" },
             flexDirection: { xs: "row", md: "column" },
             alignSelf: "flex-end",
-            marginTop: { xs: "4em" }
+            marginTop: { xs: "2em" },
         }}>
             <DeliveryImage src={uberEats} alt="Uber Eats" />
             <DeliveryImage src={doorDash} alt="Door Dash" sx={{
@@ -97,13 +97,15 @@ export default function HeroImages() {
             }} />
 
             {/* Delivery Images */}
-            <DeliveryImages />
+            <Box sx={{ marginTop: { xs: 0, md: "20em" } }}>
+                <DeliveryImages />
+            </Box>
 
             {/* Milkshake Cup */}
             <Box sx={{
                 display: "flex",
                 justifyContent: "center",
-                paddingTop: 10,
+                paddingTop: 12,
                 zIndex: -1,
                 marginBottom: {
                     xs: 0,
@@ -112,13 +114,13 @@ export default function HeroImages() {
                 paddingX: {
                     xs: 12,
                 },
-                marginTop: "-5px"
+                marginTop: "-1.25em"
             }}>
                 <Image src={milkshake} alt="milkshake" style={{ height: "auto", maxWidth: 520, minWidth: 440, width: "100%" }} />
             </Box>
 
             {/* Social Icons */}
             <SocialButtons />
-        </Box>
+        </Box >
     );
 }
