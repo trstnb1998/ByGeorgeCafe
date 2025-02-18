@@ -43,7 +43,8 @@ export default function HeroSection() {
                         md: "none"
                     },
                     marginTop: {
-                        xs: "6rem"
+                        xs: "8rem",
+                        md: "6rem"
                     },
                     paddingBottom: {
                         xs: 4,

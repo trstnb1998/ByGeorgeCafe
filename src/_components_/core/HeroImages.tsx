@@ -93,7 +93,7 @@ export default function HeroImages() {
                 },
                 backgroundSize: {
                     md: "fill"
-                }
+                }, marginTop: "2rem"
             }} />
 
             {/* Delivery Images */}
