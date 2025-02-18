@@ -112,7 +112,7 @@ export default function HeroImages() {
                 paddingX: {
                     xs: 12,
                 },
-                marginTop: { xs: "-2em", sm: 0 }
+                marginTop: "-5px"
             }}>
                 <Image src={milkshake} alt="milkshake" style={{ height: "auto", maxWidth: 520, minWidth: 440, width: "100%" }} />
             </Box>
