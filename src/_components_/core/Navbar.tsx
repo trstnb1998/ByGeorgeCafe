@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import { Typography, Box, List } from "@mui/material";
+import { Typography, Box, List, useMediaQuery, Theme } from "@mui/material";
 import { Link } from "react-scroll";
 import NavListItem from "./NavListItem";
 
 export type NavBarProps = {
     backgroundColor: string;
     textColor: string;
-    scrolledTextColor: string; // New prop for text color on scroll
+    scrolledTextColor: string;
     position: string;
-    enableOpacity?: boolean; // Optional opacity effect
-    enableBoxShadow?: boolean; // Optional shadow effect
+    enableOpacity?: boolean;
+    enableBoxShadow?: boolean;
+    isPrimary?: boolean; // ✅ Controls whether scroll effect applies
 };
 
 export default function NavBar({
@@ -19,14 +20,22 @@ export default function NavBar({
     position,
     enableOpacity = false,
     enableBoxShadow = false,
+    isPrimary = false, // ✅ Default to false if not provided
 }: NavBarProps) {
     const [opacity, setOpacity] = useState(1);
     const [boxShadow, setBoxShadow] = useState("none");
     const [currentTextColor, setCurrentTextColor] = useState(textColor);
+    const [scrolled, setScrolled] = useState(false);
+    
+    // Check if viewport width is mobile (below 'md')
+    const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down("md"));
 
     useEffect(() => {
+        if (!isPrimary) return; // ✅ Only apply scroll effects if isPrimary is true
+
         const handleScroll = () => {
             const scrollY = window.scrollY;
+            setScrolled(scrollY > 50);
 
             if (enableOpacity) {
                 setOpacity(scrollY > 50 ? 0.2 : 1);
@@ -41,7 +50,7 @@ export default function NavBar({
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [enableOpacity, enableBoxShadow, textColor, scrolledTextColor]);
+    }, [isPrimary, enableOpacity, enableBoxShadow, textColor, scrolledTextColor]);
 
     return (
         <Box
@@ -54,6 +63,8 @@ export default function NavBar({
                     md: "70px",
                 },
                 position: position,
+                top: 0,
+                left: 0,
                 alignItems: "center",
                 flexDirection: {
                     xs: "column",
@@ -61,10 +72,10 @@ export default function NavBar({
                     md: "row",
                 },
                 zIndex: 2,
-                transition: "box-shadow 0.3s ease-in-out, color 0.3s ease-in-out",
+                transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out",
+                transform: isPrimary && isMobile && scrolled ? "translateY(-50px)" : "translateY(0)"
             }}
         >
-            {/* Background Box with opacity */}
             <Box
                 sx={{
                     position: "absolute",
@@ -73,8 +84,8 @@ export default function NavBar({
                     right: 0,
                     bottom: 0,
                     backgroundColor: backgroundColor,
-                    opacity: enableOpacity ? opacity : 1, // Apply opacity only if enabled
-                    zIndex: -1, // Ensure it's behind the text
+                    opacity: enableOpacity ? opacity : 1,
+                    zIndex: -1,
                     boxShadow: enableBoxShadow ? boxShadow : "none",
                     transition: "opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
                 }}
@@ -95,7 +106,7 @@ export default function NavBar({
                             sm: "1rem",
                             md: 0,
                         },
-                        color: currentTextColor, // Apply dynamic text color
+                        color: currentTextColor,
                     }}
                 >
                     B.G.

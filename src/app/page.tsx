@@ -16,7 +16,7 @@ export default function Home() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <Box>
-                <NavBar backgroundColor="custom.red" textColor="custom.white" position="fixed" enableOpacity={true} enableBoxShadow={true} scrolledTextColor="custom.white" />
+                <NavBar backgroundColor="custom.red" textColor="custom.white" position="fixed" enableOpacity={true} enableBoxShadow={true} scrolledTextColor="custom.white" isPrimary={true}/>
 
                 <Element name="hero">
                     <HeroSection />
