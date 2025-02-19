@@ -89,7 +89,7 @@ export default function NavBar({
                     boxShadow: enableBoxShadow ? boxShadow : "none",
                     transition: "opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
                 }}
-            ></Box>
+            />
 
             <Box>
                 <Typography
